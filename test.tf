@@ -2,6 +2,7 @@ provider "aws" {
   region  = "us-west-2"
 }
 
+
 resource "aws_key_pair" "example" {
   key_name   = "terraform"
   public_key = file("~/.ssh/terraform.pub")

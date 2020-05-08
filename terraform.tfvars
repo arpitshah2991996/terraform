@@ -1,2 +1,1 @@
-
-cidrs = ["0.0.0.0/0"]
+aws_region = "us-east-1"

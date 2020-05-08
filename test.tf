@@ -12,6 +12,7 @@ resource "aws_security_group" "moogsg" {
   name        = "moogsg"
 
 
+
   # SSH access from anywhere
   ingress {
     from_port   = 22

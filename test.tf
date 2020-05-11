@@ -50,11 +50,11 @@ resource "aws_instance" "example" {
     host        = self.public_ip
   }
 
-  provisioner "remote-exec" {
-    inline = [
-      "sudo amazon-linux-extras enable nginx1.12",
-      "sudo yum -y install nginx",
-      "sudo systemctl start nginx"
-    ]
-  }
+#  provisioner "remote-exec" {
+#   inline = [
+#      "sudo amazon-linux-extras enable nginx1.12",
+#      "sudo yum -y install nginx",
+#      "sudo systemctl start nginx"
+#    ]
+#  }
 }

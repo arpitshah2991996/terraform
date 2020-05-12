@@ -28,6 +28,14 @@ resource "aws_security_group" "moogsg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  # HTTPS access from anywhere
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   # outbound internet access
   egress {
     from_port   = 0
@@ -46,7 +54,7 @@ resource "aws_instance" "example" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("/root/.ssh/terraform.pem")
+    private_key = file("~/.ssh/terraform.pem")
     host        = self.public_ip
   }
 

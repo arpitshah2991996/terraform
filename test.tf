@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = "us-west-2"
+  region  = "us-east-2"
 }
 
 
@@ -47,7 +47,7 @@ resource "aws_security_group" "moogsg" {
 
 resource "aws_instance" "example" {
   key_name      = aws_key_pair.example.key_name
-  ami           = "ami-04590e7389a6e577c"
+  ami           = "ami-00138b07206d4ceaf"
   instance_type = "t2.micro"
   security_groups = [aws_security_group.moogsg.name]
 

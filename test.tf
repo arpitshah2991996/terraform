@@ -5,7 +5,7 @@ provider "aws" {
 
 resource "aws_key_pair" "example" {
   key_name   = "terraform"
-  public_key = file("~/.ssh/terraform.pub")
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDZC9j+OPWV2g/VKhtVK4zBU63fNeIYVVkVWLim3mnIuNxMGFK2v1p1Q3GWPXv0Y5HDBoGbGyTIfLJVwc4+E5vJqpUAd+yBLsXycOfGFxUiYsZyNG9Bg4hKEL+kpFlaYUl5P3+QxArfNTe83gti8+1R1VE25MVsGMkReGUEQGGFqiBoj6lsEl8x54zL/GLglpYZeFJoVZjHA5zpTxGKla9wI8tk2u6F21i+YI0qBDibOG+DdVJ5t2Hk6wv/DlOKwqu/5VSDqSgwpvDtnGK+Etmh2dCGJC1vQ911vxjnukyPq4J5QdmQR732N/tLMwpaOLAwlitFYmcFtwFNIeeS8cvjTC8PleqNitR0BXYaXXPMuOnuUVZ1wTTKFD2Tzf49kW8A19bdxkRw4GL69mV5tueWkLG2tesb/LoZfYT2NAExui66og7FGy5J+v0m8YL0RvEHebHlHkmem01DmGsLzbs2q6P212BGUjFrDtQ4OM3oJLEqNStxgNokRjQahJ10sHU= arpit.shah@M09-ArpitS.local"
 }
 
 resource "aws_security_group" "moogsg" {

@@ -35,6 +35,20 @@ resource "aws_security_group" "moogsg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  
+  # All TCP access from anywhere
+  ingress {
+    from_port   = 0
+    to_port     = 65535
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  
+  # All ICMP access from anywhere
+  ingress {
+    protocol    = "icmp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
   # outbound internet access
   egress {
